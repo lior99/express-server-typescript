@@ -7,7 +7,7 @@ const app: Application = express();
 
 app.get('/api/heartbeat', (req: Request, res: Response): void => {
   res.setHeader('content-type', 'application/json');
-  res.json({ status: 'alive!' });
+  res.json({ status: 'App is alive!' });
 })
 
 app.get('/api/dummyresult', (req: Request, resp: Response) => {
