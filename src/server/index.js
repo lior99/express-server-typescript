@@ -5,7 +5,8 @@ var helpers_1 = require("../helpers");
 var PORT = 5500;
 var app = express();
 app.get('/api/heartbeat', function (req, res) {
-    res.send('OK! alive!');
+    res.setHeader('content-type', 'application/json');
+    res.json({ status: 'alive!' });
 });
 app.get('/api/dummyresult', function (req, resp) {
     var jsonOject = (0, helpers_1.default)();
